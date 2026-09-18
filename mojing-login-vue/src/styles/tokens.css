@@ -1,0 +1,88 @@
+/* ============================================================
+   墨境 · 水墨风设计令牌 (Design Tokens)
+   取自 Ardot 画板 InkPalette 变量集，Light / Dark 双主题
+   ============================================================ */
+:root {
+  /* 画布底色 */
+  --paper: #f2ede3; /* 左侧宣纸米白 */
+  --right-bg: #fbf7ef; /* 右侧留白底 */
+
+  /* 卡片 / 控件 */
+  --card-bg: #ffffff;
+  --card-border: #e2d9c9;
+  --input-bg: #f4efe6;
+  --input-border: #e2dbcb;
+  --placeholder: #a8a296;
+  --divider: #e6dfcf;
+
+  /* 墨色文字 */
+  --ink: #1c1c1a; /* 主墨 */
+  --ink-soft: #4a4742; /* 次墨 */
+  --ink-mute: #8a857a; /* 弱墨 */
+
+  /* 点睛色 */
+  --cinnabar: #e03d2b; /* 朱砂红 */
+  --gold: #c7a159; /* 鎏金 */
+  --qing: #2e6e66; /* 青碧 */
+
+  /* 水墨山色 */
+  --mtn-far: rgba(162, 157, 147, 0.5);
+  --mtn-mid: rgba(107, 102, 94, 0.55);
+  --mtn-near: rgba(35, 33, 29, 0.92);
+  --mist: rgba(242, 236, 227, 0.85);
+  --vignette: rgba(216, 204, 190, 0.55);
+
+  /* 阴影 */
+  --card-shadow: 0 24px 48px -12px rgba(28, 27, 25, 0.12);
+  --btn-shadow: 0 10px 20px rgba(224, 61, 43, 0.35);
+}
+
+/* 暗色主题：墨黑打底，朱砂更亮 */
+[data-theme='dark'] {
+  --paper: #14120f;
+  --right-bg: #1f1c17;
+  --card-bg: #1f1c17;
+  --card-border: #3a352c;
+  --input-bg: #2a2620;
+  --input-border: #453f34;
+  --placeholder: #8f8a7d;
+  --divider: #3a352c;
+
+  --ink: #f0ede0;
+  --ink-soft: #c9c4b8;
+  --ink-mute: #8f8a7d;
+
+  --cinnabar: #f2664f;
+  --gold: #d9b873;
+  --qing: #59a89c;
+
+  --mtn-far: rgba(120, 115, 107, 0.5);
+  --mtn-mid: rgba(90, 85, 77, 0.55);
+  --mtn-near: rgba(15, 14, 12, 0.92);
+  --mist: rgba(40, 38, 33, 0.85);
+  --vignette: rgba(0, 0, 0, 0.55);
+
+  --card-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.5);
+  --btn-shadow: 0 10px 20px rgba(242, 102, 79, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+body {
+  font-family: 'Noto Sans SC', system-ui, -apple-system, 'PingFang SC',
+    'Microsoft YaHei', sans-serif;
+  background: var(--right-bg);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.4s ease, color 0.4s ease;
+}
